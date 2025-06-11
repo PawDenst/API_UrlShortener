@@ -57,5 +57,7 @@ curl -I http://localhost:8000/shrt/2afdc/
 ```
 
 **Response:**
+```
 HTTP/1.1 302 Found  
 Location: https://example.compl.long/longer/test/url
+```

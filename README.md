@@ -50,3 +50,12 @@ curl http://localhost:8000/api/expand/2afdc/
 ```json
 {"long_url":"https://example.compl.long/longer/test/url"}
 ```
+
+### 3. Redirect using short URL
+```bash
+curl -I http://localhost:8000/shrt/2afdc/
+```
+
+**Response:**
+HTTP/1.1 302 Found  
+Location: https://example.compl.long/longer/test/url

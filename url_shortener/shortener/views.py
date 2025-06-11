@@ -8,9 +8,15 @@ from .serializers import Serializer
 
 
 def generate_shortcode():
-    code = str(uuid.uuid4())[0:5]
-    if not ShortURL.objects.filter(shortcode=code).exists():
-        return code
+    while True:
+        code = str(uuid.uuid4())[0:5]
+        if not ShortURL.objects.filter(shortcode=code).exists():
+            return code
+
+
+def redirect_view(request, shortcode):
+    short_url = get_object_or_404(ShortURL, shortcode=shortcode)
+    return redirect(short_url.long_url)
 
 
 class ShortenURLView(APIView):

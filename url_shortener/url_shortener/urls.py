@@ -19,5 +19,5 @@ from shortener.views import redirect_view
 
 urlpatterns = [
     path('api/', include('shortener.urls')),
-    path('shrt/<str:shortcode>/', redirect_view),
+    path('shrt/<str:shortcode>/', redirect_view, name='redirect'),
 ]

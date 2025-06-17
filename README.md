@@ -25,7 +25,10 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Example usage of the API with curl
+4. Automated tests can be run using pytest:
+```bash
+pytest -v
+```
 
 ### 1. Create a short URL
 ```bash

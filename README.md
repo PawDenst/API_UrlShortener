@@ -30,6 +30,8 @@ python manage.py runserver
 pytest -v
 ```
 
+## Example usage of the API with curl
+
 ### 1. Create a short URL
 ```bash
 curl -s -X POST http://localhost:8000/api/shorten/ -H "Content-Type: application/json" -d "{\"long_url\": \"https://example.compl.long/longer/test/url\"}"
